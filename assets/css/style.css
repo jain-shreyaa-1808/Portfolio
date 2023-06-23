@@ -1292,7 +1292,19 @@ form .button-area {
 .services .icon-box:hover p span{
   color: #020202;
 }
-
+@media screen and (max-width: 600px) {
+  
+  .services .row {
+    padding: 0.5rem;
+    margin-bottom: 7rem;
+  }
+  .services .row .content {
+    padding: 1rem;
+  }
+  .services .row .icon-box {
+    gap: 0;
+  }
+}
 /* Skills*/
 .team-item {
   background-color: white;
