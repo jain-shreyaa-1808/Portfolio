@@ -74,7 +74,8 @@ header {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 }
 section {
-  min-height: 100vh;
+  max-height: 150vh;
+  min-height: 70vh;
   padding: 2rem 9%;
 }
 .heading {
@@ -351,42 +352,17 @@ header .navbar ul li a:hover {
 .about .row {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
   flex-wrap: wrap;
-  padding: 4rem;
 }
-.about .row .image {
-  text-align: center;
-  flex: 1 1 35rem;
-}
-.about .row .image img {
-  margin: 4rem;
-  width: 30rem;
-  height: auto;
-  border-radius: 5%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-  mix-blend-mode: luminosity;
-  transition: 0.3s;
-  cursor: pointer;
-}
-.about .row .image img:hover {
-  mix-blend-mode: normal;
-}
+
 .about .row .content {
+  
   flex: 1 1 45rem;
-  padding: 3rem;
 }
-.about .row .content h3 {
-  color: rgb(27, 27, 27);
-  font-size: 2.5rem;
-}
-.about .row .content .tag {
-  font-size: 1.4rem;
-  color: #020133;
-  font-weight: 600;
-  margin-top: 1rem;
-}
+
 .about .row .content p {
+  text-align: justify;
+  line-height: 2;
   font-size: 1.5rem;
   margin-top: 1.5rem;
   font-family: "Nunito";
@@ -399,8 +375,12 @@ header .navbar ul li a:hover {
   gap: 1.5rem;
   font-family: "Nunito";
   font-weight: 600;
+  align-items: center;
+  justify-content: center;
 }
 .about .row .content .box-container .box p {
+  justify-content: center;
+  align-items: center;
   text-transform: none;
 }
 .about .row .content .box-container .box p span {
@@ -478,12 +458,7 @@ header .navbar ul li a:hover {
   margin: auto;
   margin-top: 2rem;
 }
-.skills .container .row {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  flex-wrap: wrap;
-  gap: 1.8rem;
-}
+
 .skills .container .bar {
   margin-bottom: 15px;
   padding: 10px;
@@ -512,6 +487,7 @@ header .navbar ul li a:hover {
   font-family: "Poppins";
   margin-left: 0.5rem;
 }
+
 /* skills media queries starts*/
 @media screen and (max-width: 600px) {
   .skills .container {
@@ -776,14 +752,15 @@ header .navbar ul li a:hover {
   margin-left: -3px;
   z-index: -2;
 }
-.experience .container {
+
+.experience .ex-container {
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
 }
 /*circles on timeline*/
-.experience .container::after {
+.experience .ex-container::after {
   content: "\f0b1";
   position: absolute;
   width: 25px;
@@ -1223,3 +1200,148 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+/* Projects made*/
+.services .icon-box {
+  text-align: center;
+  padding: 80px 20px;
+  transition: all ease-in-out 0.3s;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.services .icon-box .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: #cc1616;
+  transition: all 0.3s ease-out 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform-style: preserve-3d;
+}
+
+.services .icon-box .icon i {
+  color: #fff;
+  font-size: 28px;
+}
+
+.services .icon-box .icon::before {
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: #fce5e5;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+}
+.services .row a
+{
+  text-decoration: none;
+  
+}
+.services .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.services .icon-box h4 a {
+  color: #191919;
+}
+
+
+.services .icon-box p {
+  text-align: justify;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.services .icon-box p span
+{
+  color: red;
+  font-style: italic;
+  text-align: center;
+  margin: auto;
+}
+
+.services .icon-box:hover {
+  background: #cc1616;
+  border-color: #cc1616;
+  padding: 70px 20px 90px 20px;
+}
+
+.services .icon-box:hover .icon {
+  background: #fff;
+}
+
+.services .icon-box:hover .icon i {
+  color: #cc1616;
+}
+
+.services .icon-box:hover .icon::before {
+  background: #e82d2d;
+}
+
+.services .icon-box:hover h4 a,
+.services .icon-box:hover p {
+  color: #fff;
+}
+.services .icon-box:hover p span{
+  color: #020202;
+}
+
+/* Skills*/
+.team-item {
+  background-color: white;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+}
+.team-item img
+{
+  width: 200px;
+}
+.team-item .team-text {
+  position: relative;
+  height: 65px;
+  overflow: hidden;
+}
+
+.team-item .team-title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+}
+
+.team-item:hover .team-title {
+  top: -65px;
+}
+
+.team-item .team-social {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 65px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  transition: .5s;
+  font-size: 200%;
+}
+.team-item .team-social a{
+  text-decoration: none;
+}
+
+.team-item:hover .team-social {
+  top: 0;
+}
