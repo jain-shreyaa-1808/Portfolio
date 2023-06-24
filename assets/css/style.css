@@ -504,11 +504,11 @@ header .navbar ul li a:hover {
     margin-top: 5px;
     width: 100%;
   }
-  /* .skills
+  .skills
   {
     min-height: 80%;
     max-height: 100%;
-  } */
+  } 
 }
 /* skills media queries ends*/
 /* skills section ends */
@@ -1315,14 +1315,7 @@ form .button-area {
   }
 }
 /* Skills*/
-@media screen and (max-width :600px)
-{
-  .skills
-  {
-    min-height: 350vh;
-    
-  }
-}
+
 .team-item {
   background-color: white;
   box-shadow: 0 0 45px rgba(0, 0, 0, .07);
