@@ -1299,8 +1299,7 @@ form .button-area {
   }
   .services .row {
     padding: 0.5rem;
-    margin-bottom: 7rem;
-    grid-auto-rows:auto;
+    
   }
   .services .row .content {
     padding: 1rem;
