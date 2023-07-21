@@ -27,6 +27,8 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <title>Portfolio | Shreya Jain</title>
+  
+    
 </head>
 <body oncontextmenu="return false">
 
@@ -68,7 +70,7 @@
         <ul class="social-icons">
           <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/-shreya-jain-/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
           <li><a class="github" aria-label="GitHub" href="https://github.com/jain-shreyaa-1808" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a class="leetcode" aria-label="Instagram" href="https://leetcode.com/shreyajain1808/" target="_blank"><i class="fas fa-code" target="_blank"></i></a></li>
+          <li><a class="leetcode" aria-label="Instagram" href="https://leetcode.com/shreyajain1808/" target="_blank"><i class="fab leetcode" target="_blank"></i></a></li>
         </ul>
       </div>
     </div>
@@ -102,7 +104,7 @@
           software development domain.
         </p>
         <div class="morebtn">
-            <a href="https://drive.google.com/file/d/1N9_gU5J5yB66vxniyrGLWxGeJ1pH9z2p/view?usp=drive_link" target="_blank" class="btn"><span>Resume</span>
+            <a href="https://drive.google.com/file/d/1VnJuEA2JCrnjyUkpwJl4AS6zYS4sUXhi/view?usp=sharing" target="_blank" class="btn"><span>Resume</span>
               <i class="fas fa-arrow-circle-down"></i>
             </a>
         </div>
@@ -237,7 +239,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
+            <div class="icon-box box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
               <h4><a href="https://taarangana.in/Home/index.html" target="_blank">Taarangana <i class="fas fa-external-link-alt"></i></a></h4>
               <p><span>HTML, CSS, JS</span><br>Developed website for the college cultural society, providing a vibrant platform for students to explore and engage in
@@ -376,24 +378,20 @@
       
       <div class="form-group">
         <div class="field">
-          <input type="text" name="name" placeholder="Name" required>
+          <input type="text" id="name" placeholder="Name" required>
           <i class='fas fa-user'></i>
         </div>
         <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
+          <input type="text" id="email" placeholder="Email" required>
           <i class='fas fa-envelope'></i>
         </div>
-        <div class="field">
-          <input type="text" name="phone" placeholder="Phone">
-          <i class='fas fa-phone-alt'></i>
-        </div>
         <div class="message">
-        <textarea placeholder="Message" name="message" required></textarea>
+        <textarea placeholder="Message" id="message" required></textarea>
         <i class="fas fa-comment-dots"></i>
         </div>
         </div>
       <div class="button-area">
-        <button type="submit">
+        <button type="submit" onclick="sendMail()">
           Submit <i class="fa fa-paper-plane"></i></button>
       </div>
     </form>
@@ -452,15 +450,17 @@
 
 <!-- scroll reveal anim -->
 <script src="https://unpkg.com/scrollreveal"></script>
-
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+    emailjs.init("TTIMF1D7a5X3D5Ndy");
+})();
+</script>
 
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
 <script src="./assets/js/script.js"></script>
+
 
 </body>
 </html>

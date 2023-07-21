@@ -8,8 +8,7 @@
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform: capitalize;
-  transition: all 0.2s linear;
+  
 }
 html {
   font-size: 62.5%;
@@ -291,7 +290,7 @@ header .navbar ul li a:hover {
   display: inline-block;
   line-height: 44px;
   color: #00d9ff;
-  background-color: #09011b;
+  background-color: rgb(52,70,112);
   width: 44px;
   height: 44px;
   text-align: center;
@@ -791,19 +790,23 @@ header .navbar ul li a:hover {
   left: 50%;
 }
 /* arrows pointing right */
-.experience .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid #f68c09;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #f68c09;
-}
+
 /* arrows pointing left  */
+@media (min-width : 600px) {
+  
+  .experience .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #f68c09;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #f68c09;
+  }
+}
 .experience .right::before {
   content: " ";
   height: 0;
@@ -839,6 +842,13 @@ header .navbar ul li a:hover {
 }
 .experience .content .desc p {
   font-size: 1.2rem;
+}
+@media (max-width: 748px) {
+  .experience .ex-container
+  {
+    width: 100%;
+  }
+  
 }
 /* view all button */
 .morebtn {
@@ -1299,10 +1309,64 @@ form .button-area {
 .services .icon-box:hover p span{
   color: #020202;
 }
-@media screen and (max-width: 600px) {
+/* @media only screen and (max-width: 540px) {
+  .services{
+    display: grid;
+    min-height: 300vh;
+  }
+  .services .row {
+    padding: 0.5rem;
+    
+  }
+  .services .row .content {
+    padding: 1rem;
+    height: fit-content;
+  }
+  .services .row .icon-box {
+    gap: 0;
+}
+} */
+
+@media (max-width: 748px) {
   .services{
     display: grid;
     min-height: 240vh;
+  }
+
+  .services .row {
+    padding: 0.5rem;
+    
+  }
+  .services .row .content {
+    padding: 1rem;
+    height: fit-content;
+  }
+  .services .row .icon-box {
+    gap: 0;
+}
+}
+/* @media only screen and (min-width: 768px) {
+  .services{
+    display: grid;
+    min-height: 210vh;
+  }
+  .services .row {
+    padding: 0.5rem;
+    
+  }
+  .services .row .content {
+    padding: 1rem;
+    height: fit-content;
+  }
+  .services .row .icon-box {
+    gap: 0;
+}
+}
+
+@media (min) and (min-width: 992px) {
+  .services{
+    display: grid;
+   
   }
   .services .row {
     padding: 0.5rem;
@@ -1315,7 +1379,7 @@ form .button-area {
   .services .row .icon-box {
     gap: 0;
   }
-}
+} */
 /* Skills*/
 
 .team-item {
@@ -1368,4 +1432,9 @@ form .button-area {
 
 .team-item:hover .team-social {
   top: 0;
+}
+
+.leetcode {
+  background: url('../images/leetcode.png') no-repeat center;
+  background-color:#007bb6;
 }
